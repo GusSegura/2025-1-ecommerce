@@ -1,0 +1,20 @@
+<br><h3>Ropa Kids</h3>
+<div class="container">
+    <div class="ropa-container">
+        @for(i of showProds; track $index){
+            <div class="ropa-card">
+                <img class="img-default" [src]="i.imagen" [alt]="i.nombre">
+                <img class="img-hover" [src]="i.imagenHover" [alt]="i.nombre">
+                <div class="card-content">
+                    <p class="nombre">{{i.nombre}}</p>
+                    <hr>
+                    <p class="precio">Precio: $ <span>{{i.precio}}</span></p> 
+                    <div class="mas_menos">
+                        <button class="btn btn-outline-dark" (click)="agregarAlCarrito(i)">Agregar</button>
+                    </div>  
+                </div>             
+            </div>
+        }
+    </div>
+</div>
+

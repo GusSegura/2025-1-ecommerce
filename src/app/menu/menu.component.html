@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary menu-fijo">
+    <div class="container-fluid">
+      <a routerLink="/"><img class="logo" src="/logoNG.png" alt=""></a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/mujeres" routerLinkActive="active">Mujeres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/hombres">Hombres</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/kids">Kids</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/accesorios">Accesorios</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Iconos y dropdown para la búsqueda -->
+    <div class="collapse navbar-collapse iconos">
+      <ul class="navbar-nav">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li>
+              <div class="px-3 py-2">
+                <input type="text" class="form-control" placeholder="Buscar...">
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" role="button" (click)="showLoginPopup()">
+                <i class="fa-regular fa-user"></i>
+              </a>
+        </li>
+        <li class="nav-item">
+            <!-- carrito -->
+                    <a class="nav-link position-relative" routerLink="/carrito">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    
+                        @if (cantidadProductos > 0) {
+                        <span class="position-absolute badge-custom badge rounded-pill bg-danger">
+                            {{ cantidadProductos }}
+                        </span>
+                        }
+                    </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
