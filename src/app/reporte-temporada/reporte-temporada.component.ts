@@ -26,6 +26,7 @@ export class ReporteTemporadaComponent {
   }
   agregarAlCarrito(producto: any) {
     this.carritoService.agregarProducto(producto);
+    //
   }
 // agregarAlCarrito(producto: any) {
 //   const carrito = JSON.parse(localStorage.getItem('carrito') || '[]');
