@@ -6,7 +6,7 @@ import { CarritoService } from '../carrito.service';
 @Component({
   selector: 'app-checkout',
   standalone: true,
-  imports: [FormsModule], // 👈 Aquí es donde hacía falta
+  imports: [FormsModule], 
   templateUrl: './checkout.component.html',
   styleUrl: './checkout.component.css'
 })
@@ -39,7 +39,7 @@ export class CheckoutComponent implements OnInit {
 
       localStorage.setItem('pedido', JSON.stringify(pedido));
       
-      // ✅ Usamos el servicio para vaciar el carrito y actualizar el contador
+      
       this.carritoService.vaciarCarrito();
 
       this.router.navigate(['/confirmacion']);
